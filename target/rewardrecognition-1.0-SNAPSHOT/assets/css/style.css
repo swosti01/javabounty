@@ -1,0 +1,247 @@
+/* Sidebar styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  background-color: #F5F5F5;
+  overflow: auto;
+  padding-top: 20px;
+}
+
+/* Sidebar navigation links styling */
+.sidebar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 10px;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar-nav a:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+/* Sidebar navigation links icon styling */
+.sidebar-nav i {
+  margin-right: 10px;
+}
+
+/* Sidebar navigation links dropdown styling */
+.nav-content li {
+  margin-left: 20px;
+}
+
+.nav-content a {
+  padding: 5px;
+}
+
+.nav-content a:hover {
+  background-color: #eee;
+}
+
+/* Sidebar navigation links active styling */
+.nav-item.active a {
+  background-color: #ddd;
+  color: #333;
+}
+
+/* Sidebar navigation links dropdown icon styling */
+.nav-link.collapsed i.bi-chevron-down {
+  transform: rotate(-90deg);
+}
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Sidebar Navigation Links */
+.sidebar-nav .nav-item {
+  position: relative;
+}
+
+.sidebar-nav .nav-link {
+  display: block;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  text-decoration: none;
+}
+
+.sidebar-nav .nav-link i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.sidebar-nav .nav-link:hover,
+.sidebar-nav .nav-link:focus {
+  background-color: #f7f7f7;
+}
+
+/* Sidebar Navigation Dropdown */
+.nav-content {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-content .nav-item {
+  position: relative;
+}
+
+.nav-content .nav-link {
+  display: block;
+  padding: 10px 40px 10px 40px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+  text-decoration: none;
+}
+
+.nav-content .nav-link i {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.nav-content .nav-link:hover,
+.nav-content .nav-link:focus {
+  background-color: #f7f7f7;
+}
+
+/* Sidebar Navigation Dropdown Arrow */
+.nav-link .bi-chevron-down {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+/* Sidebar Navigation Dropdown Active */
+.nav-link.collapsed {
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Sidebar Navigation Dropdown Active Arrow */
+.nav-link.collapsed .bi-chevron-down {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Sidebar Navigation Headings */
+.nav-heading {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666666;
+}
+
+/* Sidebar Navigation Icons */
+.bi {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #666666;
+}
+
+/* Sidebar Navigation Icons Active */
+.nav-link.collapsed .bi {
+  color: #000000;
+}
+/* Main styles */
+.main {
+  padding: 50px 0;
+}
+
+/* Page title styles */
+.pagetitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.pagetitle h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  margin: 0;
+}
+
+.breadcrumb-item a {
+  color: #333;
+  text-decoration: none;
+}
+
+.breadcrumb-item.active {
+  color: #999;
+}
+
+/* Card styles */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.table {
+  font-size: 1rem;
+}
+
+.table th {
+  font-weight: 700;
+  color: #333;
+}
+
+.table td {
+  color: #666;
+}
+
+.table a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #f8f9fa;
+  color: #666;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 30px;
+}
