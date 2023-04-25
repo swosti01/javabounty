@@ -28,6 +28,11 @@
             </a>
           </li>
           <li>
+            <a href="admin?page=taskcompleted">
+              <i class="bi bi-circle"></i><span>Completed</span>
+            </a>
+          </li>
+          <li>
             <a href="admin?page=createtask">
               <i class="bi bi-circle"></i><span>Create new Task</span>
             </a>

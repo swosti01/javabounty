@@ -60,6 +60,30 @@ public class userservice {
         }
         return emp;
     }
+    public employee getUserByEmail(String Workemail){
+        employee emp = null;
+        String query = "select * from infotabel where Workemail=?";
+        PreparedStatement ps = new DBConnection().getStatement(query);
+        try{
+            ps.setString(1,Workemail);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                emp = new employee();
+                emp.setId(rs.getInt("id"));
+                emp.setAbout(rs.getString("About"));
+                emp.setFullname(rs.getString("Fullname"));
+                emp.setDepartment(rs.getString("Department"));
+                emp.setPost(rs.getString("Post"));
+                emp.setAddress(rs.getString("Address"));
+                emp.setPhone(rs.getString("Phone"));
+                emp.setWorkemail(rs.getString("Workemail"));
+            }
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        return emp;
+    }
 
 //      for storing the create task
 
@@ -278,7 +302,19 @@ public class userservice {
         ps.setInt(3,id);
         ps.execute();
     }
-     
+    public void updateUserInfo(employee emp) throws SQLException{
+        String query = "update infotabel set About=?,Fullname=?,Department=?,Post=?,Address=?,Phone=?,Workemail=? where Id=?";
+        PreparedStatement ps = new DBConnection().getStatement(query);
+        ps.setString(1,emp.getAbout());
+        ps.setString(2,emp.getFullname());
+        ps.setString(3,emp.getDepartment());
+        ps.setString(4,emp.getPost());
+        ps.setString(5,emp.getAddress());
+        ps.setString(6,emp.getPhone());
+        ps.setString(7,emp.getWorkemail());
+        ps.setInt(8,emp.getId());
+        ps.execute();
+    }
     public static void main(String[] args) {
         userservice us = new userservice();
         employee em = new employee();

@@ -237,6 +237,12 @@ public class myservlet extends HttpServlet {
             rd.forward(request, response);
         }
 //        To get the list of task tasklist
+        else if(page.equalsIgnoreCase("taskcompleted")){
+            List<employee> emList = new userservice().showTask();
+            request.setAttribute("emppp",emList);
+            RequestDispatcher rd = request.getRequestDispatcher("TasksPage/TasksCompleted.jsp");
+            rd.forward(request,response);
+        }
         else if(page.equalsIgnoreCase("task")){
             List<employee> emList = new userservice().showTask();
             request.setAttribute("emppp",emList);
@@ -253,6 +259,48 @@ public class myservlet extends HttpServlet {
             rd.forward(request,response);
         }
 //        ======================================== END OF REDIRECTING AND PULLING DATA FROM DB ========================================        
+        else if(page.equalsIgnoreCase("updateprofile")){
+            out.print("update profile");
+            employee em = new employee();
+            try{
+            
+                em.setId(Integer.parseInt(request.getParameter("id")));
+                em.setFullname(request.getParameter("fullname"));
+                em.setAbout(request.getParameter("about"));
+                em.setDepartment(request.getParameter("department"));
+                em.setPost(request.getParameter("post"));
+                em.setAddress(request.getParameter("address"));
+                em.setPhone(request.getParameter("phone"));
+                em.setWorkemail(request.getParameter("workemail"));
+            
+            out.print("cc<br/>");
+            out.print(em.getId()+"<br/>");
+            out.print(em.getFullname()+"<br/>");
+            out.print(em.getAbout()+"<br/>");
+            out.print(em.getDepartment()+"<br/>");
+            out.print(em.getPost()+"<br/>");
+            out.print(em.getAddress()+"<br/>");
+            out.print(em.getPhone()+"<br/>");
+            out.print(em.getWorkemail()+"<br/>");
+            }
+            catch(Exception e){
+                out.print("ERROR " +e);
+            } 
+            try{
+                new userservice().updateUserInfo(em);
+            }catch(Exception e){
+                out.print("ERROR " +e);
+            } 
+            
+            employee empp = new userservice().getUserByEmail(em.getWorkemail());
+            
+            HttpSession sess = request.getSession();
+            sess.setAttribute("userinfo",empp);
+                
+            RequestDispatcher rd = request.getRequestDispatcher("profilepage/MyProfile.jsp");
+            rd.forward(request, response);
+        }
+        
         else{
             out.print("There is no page equals to");
         }

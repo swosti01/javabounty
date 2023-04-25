@@ -177,7 +177,7 @@
                                     <th scope="col">Name</th>
                                     <th scope="col">Department</th>
                                     <th scope="col">Post</th>
-                                    <th scope="col">Status</th>
+<!--                                    <th scope="col">Status</th>-->
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -189,7 +189,7 @@
                                     <td>${emplist.fullname}</td>
                                     <td>${emplist.department}</td>
                                     <td class="fw">${emplist.post}</td>
-                                    <td><a href="#" class="badge bg-success">View Details</a></td>
+<!--                                    <td><a href="#" class="badge bg-success">View Details</a></td>-->
                                   </tr>
                                   </c:forEach>
                                 </tbody>

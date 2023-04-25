@@ -1,0 +1,61 @@
+cd/
+cd xampp/mysql/bin
+mysql -u root -p
+
+show databases;
+
+drop database rewardrecognition;
+create database rewardrecognition;
+use rewardrecognition;
+create table infotabel(
+Id int PRIMARY KEY AUTO_INCREMENT,
+About varchar(255),
+Fullname varchar(255),
+Password varchar(255),
+Department varchar(255),
+Post varchar(255),
+Address varchar(255),
+Phone varchar(255),
+Workemail varchar(255),
+Image varchar(255)
+);
+insert into infotabel (About,Fullname,Password,Department, Post,Address,Phone,Workemail,Image) values
+("Hi, my name is Swastika Thapa Magar, and I am a project manager. I have five years of experience in project management and have worked on projects in IT Industries .","Swastika Thapa Magar","dc647eb65e6711e155375218212b3964","Designer","Manager","Jawalakhel","9876543210","swastika@bounty.com","img/img"),
+("I am a software engineer","Kritesh Thapa","dc647eb65e6711e155375218212b3964","Programmer","Senior","Kusunti","9876543210","kritesh@bounty.com","img/img"),
+("I am a software engineer","Siddhartha Shrestha","dc647eb65e6711e155375218212b3964","Designer","Senior","Bhaktapur","9876543210","siddhartha@bounty.com","img/img"),
+("I am a software engineer","Manzil Shakya","dc647eb65e6711e155375218212b3964","Programmer","Intern","Balkumari","9876543210","manzil@bounty.com","img/img"),
+("I am a software engineer","Aakriti Simkhada","dc647eb65e6711e155375218212b3964","Designer","Junior","Jawalakhel","9876543210","aakriti@bounty.com","img/img"),
+("I am a software engineer","Kiran Chettri","dc647eb65e6711e155375218212b3964","Designer","Junior","Dhobigat","9876543210","kiran@bounty.com","img/img"),
+("I am a software engineer","Rizul Shrestha","dc647eb65e6711e155375218212b3964","Programmer","Intern","Dhobigat","9876543210","rizul@bounty.com","img/img"),
+("I am a software engineer","Searon Maharjan","dc647eb65e6711e155375218212b3964","Quality Assurance","Senior","Jawalakhel","9876543210","searon@bounty.com","img/img"),
+("I am a software engineer","Sunit Shakya","dc647eb65e6711e155375218212b3964","Designer","Senior","Manbhawan","9876543210","sunit@bounty.com","img/img"),
+("I am a software engineer","Sandeep Rai","dc647eb65e6711e155375218212b3964","Programmer","Junior","Manbhawan","9876543210","sandeep@bounty.com","img/img")
+;
+create table taskstable(
+id int PRIMARY KEY AUTO_INCREMENT,
+name varchar(255),
+file varchar(255),
+workfile varchar(255),
+reportfile varchar(255),
+date varchar(255),
+time varchar(255),
+tag varchar(255),
+rewardPoint varchar(255),
+instruction varchar(255),
+feedback varchar(255),
+stage int(5)
+);
+insert into taskstable(name, file, workfile, reportfile, date, time, tag, rewardPoint, instruction, feedback, stage) values 
+("Design a poster","","uploadfile\\Unit 9.pdf","","01,04,2023","10:00 AM","kritesh@bounty.com,aakriti@bounty.com","","You need to create a poster with forest as a theme","",1),
+("Design a card","","uploadfile\\Unit 9.pdf","","02,04,2023","10:00 AM","manzil@bounty.com,kritesh@bounty.com","","You need to create a card with forest as a theme","",1),
+("Design UI","","uploadfile\\Unit 9.pdf","","01,04,2023","10:00 AM","siddhartha@bounty.com,manzil@bounty.com","","You need to create a UI with forest as a theme","",1),
+("Design UI","","uploadfile\\Unit 9.pdf","","01,04,2023","10:00 AM","manzil@bounty.com,rizul@bounty.com","","You need to create a UI with forest as a theme","",1),
+("Design UI","","uploadfile\\Unit 9.pdf","","03,04,2023","10:00 AM","rizul@bounty.com,aakriti@bounty.com","","You need to create a UI with forest as a theme","",1),
+("Design a poster","","uploadfile\\Unit 9.pdf","","04,04,2023","10:00 AM","kritesh@bounty.com,aakriti@bounty.com","","You need to UI a poster with forest as a theme","",1),
+("Design a card","","uploadfile\\Unit 9.pdf","","05,04,2023","10:00 AM","rizul@bounty.com,manzil@bounty.com","","You need to create a ard with forest as a theme","",1),
+("Design a card","","uploadfile\\Unit 9.pdf","","05,04,2023","10:00 AM","siddhartha@bounty.com,kritesh@bounty.com","","You need to create a card with forest as a theme","",1)
+;
+select*from infotabel;
+select*from taskstable;
+
+

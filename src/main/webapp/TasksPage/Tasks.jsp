@@ -1,3 +1,4 @@
+<%@page import="model.employee"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -140,17 +141,23 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <%int idInt = 0;%>
                                     <c:forEach items="${emppp}" var="emplist" varStatus="status" begin="">
-                            <tr>
-                                <td>${status.count}</td>
-                                <td>${emplist.taskname}</td>
-                                <td>${emplist.date}</td>
-                                <td>${emplist.time}</td>
-                                <td>${emplist.rewardpoint}</td>
-                                <td><a href="admin?page=taskdetails&id=${emplist.id}" class="badge bg-success">View Details</a></td>
-                            </tr>
-                        </c:forEach>
-                                        
+                                    <%
+                                        employee emp =(employee) pageContext.getAttribute("emplist");
+                                        if(emp.getStage()==1){
+                                            idInt++;
+                                    %>
+                                    <tr>
+                                        <td><%=idInt%></td>
+                                        <td>${emplist.taskname}</td>
+                                        <td>${emplist.date}</td>
+                                        <td>${emplist.time}</td>
+                                        <td>${emplist.rewardpoint}</td>
+                                        <td><a href="admin?page=taskdetails&id=${emplist.id}" class="badge bg-success">View Details</a></td>
+                                    </tr>
+                                    <%}%>
+                                    </c:forEach> 
                                 </tbody>
                             </table>
 

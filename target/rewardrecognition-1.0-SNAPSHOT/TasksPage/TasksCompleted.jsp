@@ -145,7 +145,7 @@
                                     <c:forEach items="${emppp}" var="emplist" varStatus="status" begin="">
                                     <%
                                         employee emp =(employee) pageContext.getAttribute("emplist");
-                                        if(emp.getStage()==1){
+                                        if(emp.getStage()==2){
                                             idInt++;
                                     %>
                                     <tr>
@@ -157,7 +157,7 @@
                                         <td><a href="admin?page=taskdetails&id=${emplist.id}" class="badge bg-success">View Details</a></td>
                                     </tr>
                                     <%}%>
-                                    </c:forEach> 
+                                    </c:forEach>    
                                 </tbody>
                             </table>
 
