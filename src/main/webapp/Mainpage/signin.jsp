@@ -61,8 +61,8 @@
           <div class="signinFormCrate bor w50 flex fdc jcc">
             <div class="signinFormBigTitle bor ff1">Welcome</div>
             <form action="admin?page=login" method="post" class="signinFrom bor flex fdc" >
-                <input type="text" class="signinInputs signinInputEmail ff1" placeholder="work email" name="Workemail" value="kritesh@bounty.com">
-                <input type="text" class="signinInputs signinInputEmail ff1" placeholder="password" name="Password" value="pass1234">
+                <input type="text" class="signinInputs signinInputEmail ff1" placeholder="work email" name="Workemail" value="swastika@bounty.com">
+                <input type="password" class="signinInputs signinInputEmail ff1" placeholder="password" name="Password" value="pass1234">
               <div class="signinSigninCrate bor flex pb10">
               <input type="submit" value="Signin" class="signinButton totext ff1">
               </div>
